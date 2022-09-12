@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Spaces clone</title>
+    <script src="https://kit.fontawesome.com/939ba8c56b.js" crossorigin="anonymous"></script>
+
+    <style>
+        #main {
+            width: 30%;
+            border: 2px solid red;
+            margin: auto;
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+        }
+        #header > div {
+            border: 2px solid blue;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+        #content {
+            border: 2px solid burlywood;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        #content > div > div > img {
+            width: 60%;
+            border-radius: 100px;
+        }
+        #content > div > div:nth-child(3) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="main">
+
+        <div id="header">
+        <!-- p tag for the icon -->
+           <p><i class="fa-light fa-chevron-down"></i></p>
+            <!-- div for dots and leave -->
+           <div>
+            <p><i class="fa-regular fa-ellipsis"></i></p>
+            <p>Leave</p>
+           </div>
+        </div>   
+
+        <div>
+            <h2>Tech'ed talks|How do you learn new things and network more?</h2>
+        </div>
+
+        <div id="content">
+            <div>
+                <div><img src="https://thumbs.dreamstime.com/b/smiling-indian-man-looking-camera-mature-wearing-spectacles-portrait-middle-eastern-confident-businessman-office-195195079.jpg" alt=""></div>
+                <h4>James Bond</h4>
+                <div>
+                    <i class="fa-thin fa-microphone-slash"></i>
+                    <p>Host</p>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+        <div id="bottom"></div>
+    </div>
+    
+</body>
+</html>

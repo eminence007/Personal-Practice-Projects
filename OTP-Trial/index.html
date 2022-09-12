@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+
+    <style>
+        body {
+            background-color: #282a36;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            margin: auto;
+            height: 100vh;
+            }
+        #enter-otp {
+            display: flex;
+        } 
+        #enter-otp > input {
+            width: 25px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 2px;
+            border: 2px solid #55525c;
+            background-color: #21232d;
+            font-weight: bold;
+            color: aliceblue;
+            transition: all 0.2s;
+            outline: none;
+            }   
+        #enter-otp > input:focus {
+            border: 2px solid #a527ff;
+            box-shadow: 0 0 2px 2px #a527ff6a;
+        }
+       
+        #enter-otp > input:nth-child(3) {
+            margin-right: 10px;
+        }
+        #enter-otp + input {
+            margin-top: 20px;
+            padding: 4px 8px;
+            border-radius: 5px;
+            border: 0px;
+            color: #21232d;
+            font-size: 12px;
+        }
+        #enter-otp + input:hover {
+            background-color: gray;
+            color: aliceblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Enter OTP</h1>
+    <div id="enter-otp">
+       <input type="number" maxlength="1">
+       <input type="number" maxlength="1">
+       <input type="number" maxlength="1">
+       <input type="number" maxlength="1">
+       <input type="number" maxlength="1">
+       <input type="number" maxlength="1">
+    </div>
+    <input type="button" value="Submit" onclick="msg()">
+
+    <script>
+        function msg() {
+          alert("Low on Balance\n Keep Coding!");
+        }
+        </script>
+</body>
+</html>
