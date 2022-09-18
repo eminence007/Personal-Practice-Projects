@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Calculator</title>
+    <style>
+        #container {
+            width: 280px;
+            height: 360px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5,auto);
+            gap: 10px;
+            padding: 40px 50px 50px 50px;
+        }
+        #container > div {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18.5px;
+            border-radius: 10px;
+
+        }
+        #display {
+            grid-area: 1/1/2/5;
+            height: 60px;
+            margin-bottom: -40px;
+        }
+        .bcBlack {
+            background-color: black;
+            color: white;
+        }
+        .bcRed {
+            background-color: red;
+            color: white;
+        }
+
+        h1 {
+            color: teal;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        #container > div ~ div:hover {
+            background-color: teal;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+<body>
+    <h1>VIBHOR'S CALCULATOR</h1>
+    <div id="container">
+        <div id="display"></div>
+
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div class="bcBlack">+</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div class="bcBlack">-</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div class="bcBlack">*</div>
+        <div class="bcRed">C</div>
+        <div>0</div>
+        <div class="bcBlack">=</div>
+        <div class="bcBlack">/</div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let keys = document.querySelectorAll("#display ~ div");
+    let bag = "";  // take an empty string "bag" to store tasks performed through clicks.
+    keys.forEach(function (el){
+        el.addEventListener("click",myCalci);     //event listener is performed on the single element! 
+    })
+        
+
+    function myCalci(event) {
+       let targetNumber = event.target.innerText; 
+       if(targetNumber == "C") {
+          bag = "";
+          document.querySelector("#display").innerText = "";
+       }
+       else if(targetNumber == "=") {
+        if(bag == "") {
+            document.querySelector("#display").innerText = "";
+        }
+        else {
+            document.querySelector("#display").innerText = eval(bag);  //use "eval" to perform mathematics on strings. 
+        }
+       }
+       else {
+          bag+= targetNumber;
+          document.querySelector("#display").innerText = bag;
+       }
+       
+    }
+
+</script>
