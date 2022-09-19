@@ -1,0 +1,67 @@
+/* Fill CSS here */
+
+
+div {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+h1 {
+    font-size: 50px;
+    color: blueviolet;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+form {
+    width: 30%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px;
+    margin: auto;
+
+}
+input,select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 8px 0px 16px 0px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 7px;
+    border-radius: 20px;
+    background-color: blueviolet;
+    color: aliceblue;
+    border: 0px;
+}
+
+table {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    margin-top: 0%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: blueviolet;
+    color: aliceblue;
+}
+td,th {
+    padding: 5px;
+    border: 1px solid #ddd;
+   
+}
+
+tr:nth-child(even) {
+    background-color: aqua;
+}
+tr:hover {
+    background-color: #ddd;
+}
+tr > td:nth-child(8):hover {
+    cursor: pointer;
+}
