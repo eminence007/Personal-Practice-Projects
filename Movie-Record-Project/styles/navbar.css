@@ -1,0 +1,30 @@
+#navbar {
+    width: 100%;
+    border: 0px solid red;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: aliceblue;
+}
+#navbar > h2 {
+    margin-left: 40px;
+}
+
+#navbar > div {
+    display: flex;
+    border: 0px solid blue;
+    width: 50%;
+    justify-content: space-around;
+    color: aliceblue;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+    color: aliceblue;
+  }
+a:hover {
+    color: #ffd758;
+}

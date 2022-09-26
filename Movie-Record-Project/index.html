@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Multiplex</title>
+    <link rel="stylesheet" href="./Styles/index.css" />
+    <link rel="stylesheet" href="./Styles/navbar.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <h2>Personal Multiplex</h2>
+      <div>
+        <a href="./index.html">
+          <h2>Home</h2>
+        </a>
+        <a href="./booking.html">
+          <h2>All Movies</h2>
+        </a>
+        <a href="./buy.html">
+          <h2>My Movies</h2>
+        </a>
+      </div>
+    </div>
+    <div id="create">
+      <h1>Multiplex Management System</h1>
+      <form>
+        <input id="name" placeholder="Movie Name" type="text" />
+        <input id="mainActor" placeholder="Main Actor Name" type="text" />
+        <input id="desc" placeholder="Movie Description" type="text" />
+        <label for="">Release Date:-</label>
+        <input type="date" id="release"/>
+        <select id="category">
+          <option value="">Select Category</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Action">Action</option>
+          <option value="Comedy">Comedy</option>
+        </select>
+        <input id="price" placeholder="Ticket Price" type="number" />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+  <script src="./Scripts/index.js"></script>
+</html>
