@@ -38,6 +38,11 @@
             margin-top: 5px;
 
         }
+
+        #email:focus,#name:focus,#pass:focus {
+            width: 83%;
+            transition-delay: 0.2s;
+        }
         
         input[type="submit"] {
             background: rgb(49, 147, 212);
@@ -51,6 +56,10 @@
             margin-top: 5px;
             margin-left: 15px;
         }
+        input[type="submit"]:hover {
+            background: rgb(49, 147, 212);
+        }
+        
 
         #bottom {
             text-align: center;
@@ -77,7 +86,7 @@
                 <label for="">Full Name</label><br />
                 <input type="text" id="name" placeholder="Enter your full name" /><br>
                 <label for="">Email</label><br />
-                <input type="text" id="email" placeholder="Enter email" /><br />
+                <input type="email" id="email" placeholder="Enter email" /><br />
                 <label for="">Create Password</label><br />
                 <input type="password" id="pass" placeholder="Enter Password" /><br>
                 <input type="submit" value="Sign Up" />

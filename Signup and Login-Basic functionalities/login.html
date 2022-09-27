@@ -20,7 +20,7 @@
 
       #container {
         width: 25%;
-        height: 450px;
+        height: 440px;
         margin: auto;
         text-align: center;
         background-color: white;
@@ -41,6 +41,13 @@
         width: 78%;
         padding-bottom: 8px;
       }
+
+      #email:focus,
+      #pass:focus {
+        width: 83%;
+        transition-delay: 0.2s;
+      }
+
       input[type="submit"] {
         background: rgb(49, 147, 212);
         background: linear-gradient(
@@ -49,14 +56,21 @@
           rgba(123, 85, 182, 1) 71%,
           rgba(125, 84, 182, 1) 100%
         );
-        width: 79%;
+        width: 75%;
         padding: 15px 20px;
         border: 0px;
         color: white;
         cursor: pointer;
+        border-radius: 10px;
+        margin-top: 10px;
       }
+
+      input[type="submit"]:hover {
+            background: rgb(49, 147, 212);
+        }
+
       #bottom {
-        margin-top: 60px;
+        margin-top: 45px;
         font-size: 12px;
         color: #949292;
       }
@@ -70,13 +84,13 @@
     <div id="container">
       <h2>Login</h2>
       <form>
-        <input type="text" id="email" placeholder="Email" /><br />
+        <input type="email" id="email" placeholder="Email" /><br />
         <input type="password" id="pass" placeholder="Password" /><br />
         <input type="submit" value="Login" />
       </form>
 
       <div id="bottom">
-        <p>Forgot <a href="#">Password</a>?</p>
+        <p>Forgot <a href="https://github.com/winwithvibhor">Password</a>?</p>
         <p>Don't have an account?<a href="index.html"> Sign up</a></p>
       </div>
     </div>
@@ -96,8 +110,10 @@ function submitForm(event) {
         }
       let signupData = JSON.parse(localStorage.getItem("jsonDetails"))
       console.log(signupData)
-      
-      if(loginData.email != signupData.email) {
+      if(loginData.email == "" || loginData.pass == "") {
+        alert("Email/Password is empty. Don't do this!")
+      }
+      else if(loginData.email != signupData.email) {
         alert("Wrong email!");
       }
       else if(loginData.pass != signupData.pass) {
